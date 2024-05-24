@@ -5,14 +5,12 @@ import java.awt.*;
 
 import static java.awt.SystemColor.text;
 
-public class ShowWindow2 extends JFrame {
+public class ShowWindow2 {
 
     public static void main(String[] args) {
         // declare our variables
         // we are going to make them CONSTANTS
 
-        JTextField  MyFirstBigLabel;
-        JLabel myLabel;
 
 
         final int WINDOW_WIDTH = 350;
@@ -21,8 +19,10 @@ public class ShowWindow2 extends JFrame {
         // Create a window
 
         JFrame window = new JFrame();
-        JLabel Label1 = new JLabel("My First Big Label!!");
-        JLabel Label2 = new JLabel("My Second Big Label!");
+        JLabel label1 = new JLabel("My First Big Label");
+
+        JTextField myTextField1 = new JTextField();
+
 
         // set the title
         window.setTitle("A Simple Window");
@@ -41,18 +41,18 @@ public class ShowWindow2 extends JFrame {
         // displaying the window is a boolean
         window.setVisible(true);
 
-    }
 
-    public static void Background() {
-
-        // JFrame color
-        getContentPane().setBackground(Color.red);
-        setLocation();
-        setBounds();
-        setFont();
+        window.getContentPane().setBackground(Color.RED);
+        window.setLocation(500, 300);
+        window.setBounds(20, 50, 220, 30);
+        window.setFont(new Font("Verdana", Font.PLAIN, 20));
+        myTextField1.setBounds(20, 80, 300, 50);
 
     }
-}
+
+
+    }
+
 
 
 
